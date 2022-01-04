@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+rectangle Serveur {
+    (Subscribe) as (SUB)
+    (Get\nAir Pollution\nData) as (GAPD)
+    (Get\nPollution\nData) as (GPD)
+    (Get\nPollen\nData) as (GPlD)
+    (Get\nGrass Pollen\nData) as (GGPD)
+    (Send\nAir Pollution\nData) as (SAPD)
+}
+
+:Subscriber: as Sub
+:Meteo Station: as MS
+
+SAPD <-- MS
+
+Sub --> SUB
+Sub --> GAPD
+GAPD <.. GPD : extends
+GAPD <.. GPlD : extends
+GAPD <.. GGPD : extends
+
+@enduml
