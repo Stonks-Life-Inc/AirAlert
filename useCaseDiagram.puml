@@ -16,7 +16,8 @@ rectangle Serveur {
 SAPD <-- MS
 
 Sub --> SUB
-Sub --> GAPD
+Sub <-- GAPD
+SUB .> GAPD : include
 GAPD <.. GPD : extends
 GAPD <.. GPlD : extends
 GAPD <.. GGPD : extends
