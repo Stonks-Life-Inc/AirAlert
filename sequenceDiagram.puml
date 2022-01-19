@@ -1,7 +1,11 @@
 @startuml
-    loop 
-    "Station météorologique" -> "Station météorologique" : collecte les données
-    "Station météorologique" -> Serveur : envoie les données
-    Serveur  -> Serveur  : Stock les données
+    loop toutes les heures
+        [-> "Station météorologique" : collecte les données
+        "Station météorologique" -> Serveur : envoie les données
+        Serveur  -> Serveur  : Stock les données
+    end
+    loop toutes x jours/heures/minutes
+        "Utilisateur" -> "Serveur" : s'abonne
+        "Serveur" -> "Utilisateur" : envoie les données
     end
 @enduml
