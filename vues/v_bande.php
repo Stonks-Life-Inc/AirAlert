@@ -14,13 +14,17 @@ session_start();
             
         </div>
         <div id="Logo">
-			<img src="images/logo.png" width="215px" height="100px" 
+			<img src="images/logo_sli.png" width="215px" height="100px" 
             />
 		</div>
 
         <a id="Bouton_accueil" href="index.php?controleur=accueil" class="bouton">
             Accueil
         </a>
+        <div id="Logo_AirAlert">
+            <img src="images/logo_AirAlert.png" width="250px" height="189.25px" 
+                />
+        </div>
         <?php
         if(!isset($_SESSION['user'])){
         ?>
