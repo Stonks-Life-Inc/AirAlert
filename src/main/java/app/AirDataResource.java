@@ -25,13 +25,11 @@ public class AirDataResource {
 	public AirDataResource() {
 		AirData ad = new AirData();
 		ad.setId(0);
-		ad.setName("Yolo");
-		airData.add(ad);
-		
-		ad = new AirData();
-		ad.setId(1);
-		ad.setName("Swagg");
-		airData.add(ad);
+		ad.setDateMesure("20/01/2022");
+		ad.setNo2(10);
+		ad.setO3(50);
+		ad.setPm10(1000);
+		ad.setSo2(2);
 	}
 	
 	//Retourne toutes les relevés contenus dans le serveur
