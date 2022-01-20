@@ -13,14 +13,12 @@ session_start();
         <div id="Bande">
             
         </div>
-        <div id="Logo">
-			<img src="images/logo.png" width="215px" height="100px" 
-            />
-		</div>
+        
 
         <a id="Bouton_accueil" href="index.php?controleur=accueil" class="bouton">
             Accueil
         </a>
+        <img src="images/logo_AirAlert.png" width="50%" height="50%"/>
         <?php
         if(!isset($_SESSION['user'])){
         ?>

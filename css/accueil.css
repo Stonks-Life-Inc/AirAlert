@@ -1,80 +1,105 @@
 /* En-tête et titre page */
-#Bande{
+
+#Bande {
     position: absolute;
-    top : 0px;
-    left : 0px;
+    top: 0px;
+    left: 0px;
     height: 115px;
     width: 100%;
-    border-bottom:solid 1px grey;
+    border-bottom: solid 1px grey;
     background-color: rgba(182, 37, 53);
 }
-#Logo{
+
+#Logo {
     position: relative;
     margin-right: auto;
 }
-#Bouton_accueil{
+
+#Bouton_accueil {
     position: absolute;
     margin-left: 250px;
     top: 50px;
 }
-#Bouton_connexion{
+
+#Bouton_accueil::after {
+    content: url(../images/logo_AirAlert.png);
+    width: 10%;
+    z-index: 10;
+}
+
+#Bouton_connexion {
     position: absolute;
     margin-left: 1250px;
     top: 50px;
 }
-#Bouton_inscription{
+
+#Bouton_inscription {
     position: absolute;
     margin-left: 1400px;
     top: 50px;
 }
-#Bouton_deconnexion{
+
+#Bouton_deconnexion {
     position: absolute;
     margin-left: 1325px;
     top: 50px;
 }
-#Titre_Page{
+
+#Titre_Page {
     text-align: center;
     vertical-align: middle;
     font-size: xx-large;
     color: rgba(182, 37, 53);
-    width : 400px;
+    width: 400px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 /* Page Accueil */
 
+
 /* Page connexion */
-#bloc_connexion{
-    width:400px;
+
+#bloc_connexion {
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
+
 #form_connexion {
-    width:100%;
+    width: 100%;
     padding: 30px;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+
 /* Page inscription */
-#bloc_inscription{
-    width:400px;
+
+#bloc_inscription {
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
+
 #form_inscription {
-    width:100%;
+    width: 100%;
     padding: 30px;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
+
 /* Formulaires */
-input[type=text], input[type=password], input[type=integer] {
+
+input[type=text],
+input[type=password],
+input[type=integer] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -83,8 +108,10 @@ input[type=text], input[type=password], input[type=integer] {
     box-sizing: border-box;
 }
 
+
 /* Classe bouton */
-.bouton{
+
+.bouton {
     padding: auto;
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
