@@ -1,25 +1,30 @@
-@startuml
+Title : AirAlert
+
 left to right direction
+skinparam style strictuml
+skinparam packageStyle rect
 
-rectangle Serveur {
-    (Subscribe) as (SUB)
-    (Get\nAir Pollution\nData) as (GAPD)
-    (Get\nPollution\nData) as (GPD)
-    (Get\nPollen\nData) as (GPlD)
-    (Get\nGrass Pollen\nData) as (GGPD)
-    (Send\nAir Pollution\nData) as (SAPD)
+actor Utilisateur as user
+rectangle "Serveur" {
+    rectangle "Site" {
+        (Se connecter) as connect
+        user --> connect
+        (Se déconnecter) as disconnect
+        disconnect ..> connect : <<include>>
+        user --> disconnect
+        (S'abbonner à un flux) as aboFlux
+        connect <.. aboFlux : << include >>
+        (Se désabonner à un flux) as daboFlux
+        connect <.. daboFlux : << include >>
+        aboFlux <.. daboFlux : << include >>
+        user --> aboFlux
+        user --> daboFlux
+        (Consulter les données) as checkData
+        user --> checkData
+        checkData ..> connect : <<include>>
+        checkData ..> aboFlux : <<include>>
+    } 
+    (Envoyer les données) as sendData
 }
-
-:Subscriber: as Sub
-:Meteo Station: as MS
-
-SAPD <-- MS
-
-Sub --> SUB
-Sub <-- GAPD
-SUB .> GAPD : include
-GAPD <.. GPD : extends
-GAPD <.. GPlD : extends
-GAPD <.. GGPD : extends
-
-@enduml
+actor Station 
+Station --> sendData
