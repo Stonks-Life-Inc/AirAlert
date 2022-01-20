@@ -21,10 +21,6 @@ session_start();
         <a id="Bouton_accueil" href="index.php?controleur=accueil" class="bouton">
             Accueil
         </a>
-        <div id="Logo_AirAlert">
-            <img src="images/logo_AirAlert.png" width="250px" height="189.25px" 
-                />
-        </div>
         <?php
         if(!isset($_SESSION['user'])){
         ?>

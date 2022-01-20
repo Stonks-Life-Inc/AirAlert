@@ -44,13 +44,18 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Page Accueil */
+
 #logo_AirAlert{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
 }
 
-/* Page Accueil */
+#logo_videoYT{
+    position: relative;
+}
 
 /* Page connexion */
 #bloc_connexion{
