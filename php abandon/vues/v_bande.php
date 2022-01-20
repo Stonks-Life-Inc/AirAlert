@@ -13,7 +13,14 @@ session_start();
         <div id="Bande">
             
         </div>
+<<<<<<< HEAD:vues/v_bande.php
         
+=======
+        <div id="Logo">
+			<img src="images/logo_sli.png" width="215px" height="100px" 
+            />
+		</div>
+>>>>>>> 7ffc0aa3b66ba59a35a63610d5eaeb8302a42277:php abandon/vues/v_bande.php
 
         <a id="Bouton_accueil" href="index.php?controleur=accueil" class="bouton">
             Accueil

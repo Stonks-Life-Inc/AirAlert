@@ -60,6 +60,18 @@
 
 /* Page Accueil */
 
+#logo_AirAlert {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#logo_videoYT {
+    position: relative;
+    margin-top: 500px;
+}
+
 
 /* Page connexion */
 

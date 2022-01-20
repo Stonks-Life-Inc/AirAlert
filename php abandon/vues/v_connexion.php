@@ -4,7 +4,6 @@
 
 <div id="bloc_connexion">
     <!-- zone de connexion -->
-    
     <form id="form_connexion" action="index.php?controleur=v_connexion&action=connexion" method="POST">
         <label><b>Nom d'utilisateur</b></label>
         <input type="text" placeholder="Entrer le nom d'utilisateur" name="usernameconnect" required>
