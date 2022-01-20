@@ -1,0 +1,48 @@
+header {
+    margin-bottom: 100px;
+}
+
+#header-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // justify-content: center;
+    // align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+    border-bottom: solid 1px grey;
+    background-color: rgb(182, 37, 53);
+}
+
+.nav-div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 33%;
+}
+
+#Logo_AirAlert {
+    img {
+        position: relative;
+        bottom: -50px;
+    }
+}
+
+#nav-home-logo {}
+
+#Logo_AirAlert {
+    align-items: flex-end
+}
+
+#nav-log {}
+
+.nav-btn {
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    color: black;
+    font-size: 4vh;
+}

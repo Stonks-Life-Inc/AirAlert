@@ -1,0 +1,227 @@
+@charset "UTF-8";
+header {
+  margin-bottom: 100px;
+}
+
+#header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+  border-bottom: solid 1px grey;
+  background-color: #b62535;
+}
+
+.nav-div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 33%;
+}
+
+#Logo_AirAlert img {
+  position: relative;
+  bottom: -50px;
+}
+
+#Logo_AirAlert {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.nav-btn {
+  margin: 10px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  color: black;
+  font-size: 4vh;
+}
+
+/* En-tête et titre page */
+body {
+  margin: 0;
+}
+
+.main {
+  width: 75%;
+  margin: auto;
+}
+
+.titre_Page {
+  text-align: center;
+  vertical-align: middle;
+  font-size: xx-large;
+  color: #b62535;
+  width: 400px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article {
+  background-color: #cecece2c;
+  border-radius: 15px;
+  padding: 10px;
+  border: 2px solid #afafaf2c;
+  margin: 25px auto;
+}
+
+#videoYT {
+  padding: 0;
+  border-radius: 5px;
+  border: 2px solid #78000f;
+  background-color: #78000f;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-color: #ccc;
+  border-spacing: 0;
+  margin: 0px auto;
+}
+
+.tg td {
+  background-color: #fff;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg .tg-ugpb {
+  font-size: large;
+  font-weight: bold;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: center;
+  top: -1px;
+  vertical-align: top;
+  will-change: transform;
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 0px;
+      grid-template-areas: "text video";
+}
+
+.text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+}
+
+.video {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: video;
+}
+
+/* Page Accueil */
+#logo_videoYT {
+  position: relative;
+  margin-top: 500px;
+}
+
+/* Page connexion */
+#bloc_connexion {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#form_connexion {
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* Page inscription */
+#bloc_inscription {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#form_inscription {
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* Formulaires */
+input[type=text],
+input[type=password],
+input[type=integer] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Classe bouton */
+.bouton {
+  padding: auto;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  vertical-align: auto;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

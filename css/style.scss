@@ -1,0 +1,173 @@
+@import '_global';
+@import '_header';
+
+/* En-tête et titre page */
+
+body {
+    margin: 0;
+}
+
+.main {
+    width: 75%;
+    margin: auto;
+}
+
+.titre_Page {
+    text-align: center;
+    vertical-align: middle;
+    font-size: xx-large;
+    color: $nav-red-color;
+    width: 400px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article {
+    background-color: $article-bg-color;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid $article-border-color;
+    margin: 25px auto;
+}
+
+#videoYT {
+    padding: 0;
+    border-radius: 5px;
+    border: 2px solid $nav-dark-red-color;
+    background-color: $nav-dark-red-color;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-color: #ccc;
+    border-spacing: 0;
+    margin: 0px auto;
+}
+
+.tg td {
+    background-color: #fff;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-ugpb {
+    font-size: large;
+    font-weight: bold;
+    position: -webkit-sticky;
+    position: sticky;
+    text-align: center;
+    top: -1px;
+    vertical-align: top;
+    will-change: transform
+}
+
+.tg .tg-0lax {
+    text-align: left;
+    vertical-align: top
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "text video";
+}
+
+.text {
+    grid-area: text;
+}
+
+.video {
+    grid-area: video;
+}
+
+
+/* Page Accueil */
+
+#logo_videoYT {
+    position: relative;
+    margin-top: 500px;
+}
+
+
+/* Page connexion */
+
+#bloc_connexion {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form_connexion {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+/* Page inscription */
+
+#bloc_inscription {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form_inscription {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+/* Formulaires */
+
+input[type=text],
+input[type=password],
+input[type=integer] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Classe bouton */
+
+.bouton {
+    padding: auto;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    vertical-align: auto;
+    text-decoration: none;
+}
