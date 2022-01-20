@@ -87,19 +87,19 @@ public class AirDataResource {
 	}
 	
 	//Action de recherche de notre API
-	/*@GET
+	@GET
 	@Path("_search")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response search(@QueryParam("id") Integer id, @QueryParam("name") String name) {
-		if(id != null && name != null) {
-			return Response.ok(airData.stream().filter(airData -> id == airData.getId() && name.contains(airData.getName()))
+	public Response search(@QueryParam("id") Integer id, @QueryParam("dateMesure") String dateMesure) {
+		if(id != null && dateMesure != null) {
+			return Response.ok(airData.stream().filter(airData -> id == airData.getId() && dateMesure.contains(airData.getDateMesure()))
 					.findAny().orElse(null)).build();
-		}else if(id != null && name == null) {
+		}else if(id != null && dateMesure == null) {
 			return Response.ok(airData.stream().filter(airData -> id == airData.getId()).findAny().orElse(null)).build();
-		}else if(id == null && name != null) {
-			return Response.ok(airData.stream().filter(airData -> name.contains(airData.getName())).findAny().orElse(null)).build();
+		}else if(id == null && dateMesure != null) {
+			return Response.ok(airData.stream().filter(airData -> dateMesure.contains(airData.getDateMesure())).findAny().orElse(null)).build();
 		}else {
 			return Response.ok(airData).build();
 		}
-	}*/
+	}
 }
