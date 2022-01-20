@@ -54,7 +54,8 @@
 }
 
 #logo_videoYT{
-    position: relative;
+    position: absolute;
+    right: 0px;
 }
 
 /* Page connexion */

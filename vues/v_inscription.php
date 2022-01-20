@@ -4,8 +4,6 @@
 
 <div id="bloc_inscription">
     <!-- zone d'inscription -->
-
-
     <form id="form_inscription" action="index.php?controleur=v_inscription&action=inscription" method="POST">
         <label><b>Nom d'utilisateur</b></label>
         <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required id="i_utilisateur" value="<?php if(isset($username)) { echo $username; } ?>">
