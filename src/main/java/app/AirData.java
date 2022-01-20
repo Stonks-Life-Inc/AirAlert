@@ -1,7 +1,10 @@
 package app;
 
-@DATA
+import lombok.Data;
+
+@Data
 public class AirData {
 	private int id;
 	private String name;
+	private 
 }
