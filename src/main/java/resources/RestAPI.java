@@ -4,7 +4,7 @@ import javax.ws.rs.ApplicationPath;
 
 import org.glassfish.jersey.server.ResourceConfig;
 
-@ApplicationPath("api")
+@ApplicationPath("AirAlert")
 public class RestAPI extends ResourceConfig{
 
 	public RestAPI() {

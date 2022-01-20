@@ -18,7 +18,7 @@ public class MainApi extends ResourceConfig implements ServletContextListener {
 	public MainApi() throws IOException, TimeoutException {
 		packages("app");
 		
-		MqttClient client = new MqttClient();
+		//MqttClient client = new MqttClient();
 		
 		
 	}
