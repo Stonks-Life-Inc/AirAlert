@@ -3,26 +3,26 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.websocket.server.PathParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import app.AirData;
 
 @Path("airData")
 public class AirDataResource {
 	private List<AirData> airData = new ArrayList<>();
 	
 	public AirDataResource() {
+		//Nouveau relevé test
 		AirData ad = new AirData();
 		ad.setId(0);
 		ad.setDateMesure("20/01/2022");
@@ -30,6 +30,8 @@ public class AirDataResource {
 		ad.setO3(50);
 		ad.setPm10(1000);
 		ad.setSo2(2);
+		//On ajoute ce nouveau relevé.
+		airData.add(ad);
 	}
 	
 	//Retourne toutes les relevés contenus dans le serveur
@@ -85,7 +87,7 @@ public class AirDataResource {
 	}
 	
 	//Action de recherche de notre API
-	@GET
+	/*@GET
 	@Path("_search")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response search(@QueryParam("id") Integer id, @QueryParam("name") String name) {
@@ -99,5 +101,5 @@ public class AirDataResource {
 		}else {
 			return Response.ok(airData).build();
 		}
-	}
+	}*/
 }

@@ -80,6 +80,11 @@
 			<version>${log4j2.version}</version>
 		</dependency>
 		<dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.14.0</version>
+        </dependency>
+		<dependency>
 			<groupId>io.swagger.core.v3</groupId>
 			<artifactId>swagger-jaxrs2</artifactId>
 			<version>${swagger.version}</version>
