@@ -56,22 +56,45 @@
        
 
     $indexCalc = 0;
-    if($so2 >= 10){
+    if($so2 >= 350){
         $indexCalc++;
+        $couleurSO2 = "red";
     }
-    if($no2 >= 10){
-        $indexCalc++;
+    else {
+        $couleurSO2 = "green";
     }
-    if($o3 >= 10){
+    if($no2 >= 240){
         $indexCalc++;
+        $couleurNO2 = "red";
     }
-    if($pm10 >= 10){
+    else {
+        $couleurNO2 = "green";
+    
+    }
+    if($o3 >= 120){
         $indexCalc++;
+        $couleurO3 = "red";
+    }
+    else {
+        $couleurO3 = "green";
+    
+    }
+    if($pm10 >= 50){
+        $indexCalc++;
+        $couleurPM = "red";
+    }
+    else {
+        $couleurPM = "green";
+    
     }
 
-    if($indexCalc >= 2)
-    {
-        //TODO add result test for value below
+    if ($indexCalc >= 1) {
+        $escargot = "res/media/img/Escargot_Paslezgongue.png";
+        $message = "Alors, comment te dire. Si tu respire dehors, tu es dead ça chacal :/ Cépadpo";
+    }
+    else {
+        $escargot = "res/media/img/Escargot_lezgongue.png";
+        $message = "C'est okay mon reuf, va t'éclater dans la cambrousse ! Je sais pas moi, saute dans un tas de feuilles mortes, fais du frisbee avec des amis. Trouve de bonnes activités !";
     }
     
     ?>
@@ -80,7 +103,7 @@
         <article id="site-introduction" class="container">
             <div class="text">
                 <h2>Introduction</h2>
-                <p>ipsum dolor sit amet consectetur adipisicing elit. Earum unde, dignissimos asperiores dicta excepturi velit eaque? Libero perferendis nihil delectus assumenda dolorum quis, explicabo inventore consequuntur officia impedit qui quae?</p>
+                <p>Une norme de qualité de l'air est une valeur quantitative prescrite concernant la qualité de l'air. Elle est définie par polluant, en fonction de la quantité et du type de ce polluant, en tenant compte d'autres paramètres physiques (température, humidité, pression...). Elle s'applique à l'air intérieur (public ou privé), à l'air du lieu de travail et/ou à l'air ambiant extérieur (l'air que chacun respire, pour lequel en France la Loi sur l'air du 30 décembre 1996 impose qu'il « ne nuise pas à la santé publique » — cf. immission —). Elle concerne aussi l'émission de certains rejets (émissions des industriels et autres émetteurs fixes — pollueurs réels ou potentiels —, émissions automobiles et autres émetteurs mobiles). La norme peut être définie par des acteurs internationaux, nationaux ou régionaux, et en premier lieu sous l'égide de l'Organisation des Nations unies avec l'Organisation mondiale de la santé qui a publié en 1987 des recommandations de qualité de l'air pour la santé, et des valeurs guides pour l'air ambiant dans le monde (Air quality guidelines ou AQGs). Sur des bases scientifiques ces normes ont été mises à jour en 2005 puis deux rapports OMS ont ensuite synthétisé les données nouvelles sur le sujet : le rapport REVIHAAP (2013) parallèle à la mise à jour des politiques de l’Union européenne sur la pollution de l'air ; puis un rapport de 2016 conforme aux engagements de l'OMS de réviser ses valeurs-guide probablement avant la fin-2020).</p>
             </div>
             <div class="video"><iframe id="videoYT" width="560" height="315" src="https://www.youtube.com/embed/IeMIPNsKWoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe></div>
@@ -93,41 +116,55 @@
                     <thead>
                         <tr>
                             <th class="tg-ugpb">Champs</th>
-                            <th class="tg-ugpb">Valeurs</th>
+                            <th class="tg-ugpb">Normes européennes (µg/m³)</th>
+                            <th class="tg-ugpb">Valeurs (µg/m³)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="tg-0lax">id</td>
+                            <td class="tg-0lax">---</td>
                             <td class="tg-0lax"><?php echo $id ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Date de relevé</td>
+                            <td class="tg-0lax">---</td>
                             <td class="tg-0lax"><?php echo $dateMesure ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">SO2</td>
-                            <td class="tg-0lax"><?php echo $so2; ?></td>
+                            <td class="tg-0lax">350</td>
+                            <td class="tg-0lax" <?php echo "style = 'background-color : ".$couleurSO2."'" ?>><?php echo $so2; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">NO2</td>
-                            <td class="tg-0lax"><?php echo $no2; ?></td>
+                            <td class="tg-0lax">240</td>
+                            <td class="tg-0lax" <?php echo "style = 'background-color : ".$couleurNO2."'" ?>><?php echo $no2; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">O3</td>
-                            <td class="tg-0lax"><?php echo $o3; ?></td>
+                            <td class="tg-0lax">120</td>
+                            <td class="tg-0lax" <?php echo "style = 'background-color : ".$couleurO3."'" ?>><?php echo $o3; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Pm10</td>
-                            <td class="tg-0lax"><?php echo $pm10; ?></td>
+                            <td class="tg-0lax">50</td>
+                            <td class="tg-0lax"  <?php echo "style = 'background-color : ".$couleurPM."'" ?>><?php echo $pm10; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Qualité global de l'air</td>
-                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax" colspan="2">
+                                <img
+                                src=<?php echo $escargot ?> 
+                                alt="Escargot paslezgongue si une valeur ou plus sont au dessus des normes. Sinon escargot lezgongue :)"
+                                width="200px" >
+                            </td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Nos recommandations</td>
-                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax" colspan="2">
+                                <?php echo $message ?>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -142,6 +179,21 @@
     </section>
 
     <script src="" async defer></script>
+
+    <div class="photos">
+        <div class="Arthur">
+            <img src="res/media/img/Arthur.jpg" alt="Arthur" width=200px>
+        </div>
+        <div class="Baba">
+            <img src="res/media/img/Baba.jpg" alt="Baba" width=200px>
+        </div>
+        <div class="Clement">
+            <img src="res/media/img/Clement.jpg" alt="Clement" width=200px>
+        </div>
+        <div class="Sami">
+            <img src="res/media/img/Sami.jpg" alt="Sami" width=200px>
+        </div>
+    </div>
 </body>
 
 </html>
