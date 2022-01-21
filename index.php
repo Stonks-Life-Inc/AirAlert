@@ -26,7 +26,6 @@
 
     //Call to API to retrieve all data on the server using getAll();
     $latestData = file_get_contents('http://localhost:8080/AirAlert/airData/');
-    $latestData = '{"dateMesure":"2022-01-21","id":1,"no2":50,"o3":14,"pm10":32,"so2":10}';
     $latestData = json_decode($latestData);
 
 
@@ -37,23 +36,23 @@
     $o3 = intval($latestData->o3); 
     $pm10 = intval($latestData->pm10); 
 
-    // if(isset($_GET["datePicker"])){
-    //     $dateToSearch = $_GET["datePicker"];
-    //     if(file_get_contents("http://localhost:8080/AirAlert/airData/_search/?dateMesure=".$dateToSearch) !== null){
+    if(isset($_GET["datePicker"])){
+        $dateToSearch = $_GET["datePicker"];
+        if(file_get_contents("http://localhost:8080/AirAlert/airData/_search/?dateMesure=".$dateToSearch) !== null){
             
-    //         $latestData = file_get_contents("http://localhost:8080/AirAlert/airData/_search/?dateMesure=".$dateToSearch);
-    //         $latestData = json_decode($latestData);
-    //         var_dump($latestData);
-    //         echo $latestData;
-    //         echo gettype($latestData);
-    //         $id = $latestData->id;
-    //         $dateMesure = $latestData->dateMesure;
-    //         $so2 = intval($latestData->so2); 
-    //         $no2 = intval($latestData->no2); 
-    //         $o3 = intval($latestData->o3); 
-    //         $pm10 = intval($latestData->pm10); 
-    //     }
-    // }
+            $latestData = file_get_contents("http://localhost:8080/AirAlert/airData/_search/?dateMesure=".$dateToSearch);
+            $latestData = json_decode($latestData);
+            var_dump($latestData);
+            echo $latestData;
+            echo gettype($latestData);
+            $id = $latestData->id;
+            $dateMesure = $latestData->dateMesure;
+            $so2 = intval($latestData->so2); 
+            $no2 = intval($latestData->no2); 
+            $o3 = intval($latestData->o3); 
+            $pm10 = intval($latestData->pm10); 
+        }
+    }
         
     
 
@@ -73,7 +72,7 @@
         $indexCalc++;
     }
 
-    if($indexCalc++ >= 2)
+    if($indexCalc >= 2)
     {
         //TODO add result test for value below
     }
