@@ -293,18 +293,15 @@ input[type=integer] {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: Photo;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.tg {
+.PhotodeGroupe .tg {
   border-collapse: collapse;
   border-spacing: 0;
   margin: 0px auto;
 }
 
-.tg td {
+.PhotodeGroupe .tg td {
   border-color: black;
   border-style: solid;
   border-width: 1px;
@@ -315,7 +312,7 @@ input[type=integer] {
   word-break: normal;
 }
 
-.tg th {
+.PhotodeGroupe .tg th {
   border-color: black;
   border-style: solid;
   border-width: 1px;
@@ -327,7 +324,7 @@ input[type=integer] {
   word-break: normal;
 }
 
-.tg .tg-2xbj {
+.PhotodeGroupe .tg .tg-2xbj {
   border-color: inherit;
   font-size: 18px;
   font-weight: bold;
@@ -335,7 +332,7 @@ input[type=integer] {
   vertical-align: top;
 }
 
-.tg .tg-sysp {
+.PhotodeGroupe .tg .tg-sysp {
   color: #3166ff;
   text-align: center;
   vertical-align: top;
