@@ -26,7 +26,7 @@
 
     //Call to API to retrieve all data on the server using getAll();
     $latestData = file_get_contents('http://localhost:8080/AirAlert/airData/');
-    $latestData = '{"dateMesure":"2022-01-21","id":1,"no2":50,"o3":14,"pm10":32,"so2":10}';
+    $latestData = '{"dateMesure":"2022-01-21","id":1,"no2":5000,"o3":14,"pm10":32,"so2":10}';
     $latestData = json_decode($latestData);
 
 
@@ -62,15 +62,34 @@
     $indexCalc = 0;
     if($so2 >= 350){
         $indexCalc++;
+        $couleurSO2 = "red";
+    }
+    else {
+        $couleurSO2 = "green";
     }
     if($no2 >= 240){
         $indexCalc++;
+        $couleurNO2 = "red";
+    }
+    else {
+        $couleurNO2 = "green";
+    
     }
     if($o3 >= 120){
         $indexCalc++;
+        $couleurO3 = "red";
+    }
+    else {
+        $couleurO3 = "green";
+    
     }
     if($pm10 >= 50){
         $indexCalc++;
+        $couleurPM = "red";
+    }
+    else {
+        $couleurPM = "green";
+    
     }
 
     if ($indexCalc >= 1) {
@@ -119,22 +138,22 @@
                         <tr>
                             <td class="tg-0lax">SO2</td>
                             <td class="tg-0lax">350</td>
-                            <td class="tg-0lax"><?php echo $so2; ?></td>
+                            <td class="tg-0lax" <?php echo "style = 'background-color : ".$couleurSO2."'" ?>><?php echo $so2; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">NO2</td>
                             <td class="tg-0lax">240</td>
-                            <td class="tg-0lax"><?php echo $no2; ?></td>
+                            <td class="tg-0lax" <?php echo "style = 'background-color : ".$couleurNO2."'" ?>><?php echo $no2; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">O3</td>
                             <td class="tg-0lax">120</td>
-                            <td class="tg-0lax"><?php echo $o3; ?></td>
+                            <td class="tg-0lax" <?php echo "style = 'background-color : ".$couleurO3."'" ?>><?php echo $o3; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Pm10</td>
                             <td class="tg-0lax">50</td>
-                            <td class="tg-0lax"><?php echo $pm10; ?></td>
+                            <td class="tg-0lax"  <?php echo "style = 'background-color : ".$couleurPM."'" ?>><?php echo $pm10; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Qualité global de l'air</td>
