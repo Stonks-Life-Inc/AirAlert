@@ -60,22 +60,26 @@
     
 
     $indexCalc = 0;
-    if($so2 >= 10){
+    if($so2 >= 350){
         $indexCalc++;
     }
-    if($no2 >= 10){
+    if($no2 >= 240){
         $indexCalc++;
     }
-    if($o3 >= 10){
+    if($o3 >= 120){
         $indexCalc++;
     }
-    if($pm10 >= 10){
+    if($pm10 >= 50){
         $indexCalc++;
     }
 
-    if($indexCalc >= 2)
-    {
-        //TODO add result test for value below
+    if ($indexCalc >= 1) {
+        $escargot = "res/media/img/Escargot_Paslezgongue.png";
+        $message = "Alors, comment te dire. Si tu respire dehors, tu es dead ça chacal :/ Cépadpo";
+    }
+    else {
+        $escargot = "res/media/img/Escargot_lezgongue.png";
+        $message = "C'est okey mon reuf, va t'éclater dans la cambrousse ! Je sais pas moi, saute dans un tas de feuilles mortes, fais du frisbee avec des amis. Trouve de bonnes activités !";
     }
     
     ?>
@@ -97,41 +101,55 @@
                     <thead>
                         <tr>
                             <th class="tg-ugpb">Champs</th>
-                            <th class="tg-ugpb">Valeurs</th>
+                            <th class="tg-ugpb">Normes européennes (µg/m³)</th>
+                            <th class="tg-ugpb">Valeurs (µg/m³)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="tg-0lax">id</td>
+                            <td class="tg-0lax">---</td>
                             <td class="tg-0lax"><?php echo $id ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Date de relevé</td>
+                            <td class="tg-0lax">---</td>
                             <td class="tg-0lax"><?php echo $dateMesure ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">SO2</td>
+                            <td class="tg-0lax">350</td>
                             <td class="tg-0lax"><?php echo $so2; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">NO2</td>
+                            <td class="tg-0lax">240</td>
                             <td class="tg-0lax"><?php echo $no2; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">O3</td>
+                            <td class="tg-0lax">120</td>
                             <td class="tg-0lax"><?php echo $o3; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Pm10</td>
+                            <td class="tg-0lax">50</td>
                             <td class="tg-0lax"><?php echo $pm10; ?></td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Qualité global de l'air</td>
-                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax" colspan="2">
+                                <img
+                                src=<?php echo $escargot ?> 
+                                alt="Escargot paslezgongue si une valeur ou plus sont au dessus des normes. Sinon escargot lezgongue :)"
+                                width="200px" >
+                            </td>
                         </tr>
                         <tr>
                             <td class="tg-0lax">Nos recommandations</td>
-                            <td class="tg-0lax"></td>
+                            <td class="tg-0lax" colspan="2">
+                                <?php echo $message ?>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
