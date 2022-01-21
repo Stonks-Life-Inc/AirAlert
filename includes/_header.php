@@ -12,5 +12,4 @@
             <a href="" title="Connexion" class="nav-btn">Connexion</a>
         </div>
     </nav>
-
 </header>
