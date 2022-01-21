@@ -1,0 +1,13 @@
+@startuml
+
+class AirData <<Serializable>>{
+    - int id
+    - String dateMesure
+    - int so2
+    - int no2
+    - int o3
+    - int pm10
+}
+
+
+@enduml
