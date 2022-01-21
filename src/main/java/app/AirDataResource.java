@@ -22,26 +22,34 @@ public class AirDataResource {
 	private List<AirData> airData = new ArrayList<>();
 	
 	public AirDataResource() {
-		//Nouveau relevÈ test
+		//Nouveau relev√© test
 		AirData ad = new AirData();
 		ad.setId(0);
-		ad.setDateMesure("20/01/2022");
+		ad.setDateMesure("2022-01-20");
 		ad.setNo2(10);
 		ad.setO3(50);
 		ad.setPm10(1000);
 		ad.setSo2(2);
-		//On ajoute ce nouveau relevÈ.
+		//On ajoute ce nouveau relev√©.
+		airData.add(ad);
+		
+		ad.setId(1);
+		ad.setDateMesure("2022-01-21");
+		ad.setNo2(50);
+		ad.setO3(14);
+		ad.setPm10(32);
+		ad.setSo2(10);
 		airData.add(ad);
 	}
 	
-	//Retourne toutes les relevÈs contenus dans le serveur
+	//Retourne toutes les relev√©s contenus dans le serveur
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllAirData() {
-		return Response.ok(airData).build();
+		return Response.ok(Consumer.airDataConsumer).build();
 	}
 	
-	//On cherche un relevÈ de l'Ètat de l'air gr‚ce ‡ l'ID du relevÈ
+	//On cherche un relev√© de l'√©tat de l'air gr√¢ce √† l'ID du relev√©
 	@Path("{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -52,8 +60,8 @@ public class AirDataResource {
 			).build();
 	}
 	
-	//Ajouter une nouvelle sÈrie de donnÈes sur l'Ètat de l'air.
-	//Cette action de l'API sera utilisÈ par la station mÈtÈo pour publier son 
+	//Ajouter une nouvelle s√©rie de donn√©es sur l'√©tat de l'air.
+	//Cette action de l'API sera utilis√© par la station m√©t√©o pour publier son 
 	//compte rendu
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -63,7 +71,7 @@ public class AirDataResource {
 		return Response.ok().build();
 	}
 	
-	//Action de mise ‡ jour d'un relevÈ selon son id.
+	//Action de mise √† jour d'un relev√© selon son id.
 	@PUT
 	@Path("{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
