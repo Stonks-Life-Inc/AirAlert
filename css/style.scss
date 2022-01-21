@@ -112,7 +112,8 @@ article {
 }
 
 .photos {  display: grid;
-    padding-left: 8%;
+    background-color: rgb(182, 37, 53);
+    padding-left: 9%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
@@ -128,6 +129,9 @@ article {
   .Clement { grid-area: Clement; }
   
   .Sami { grid-area: Sami; }
+
+  
+  
   
   
 
@@ -196,3 +200,28 @@ input[type=integer] {
     vertical-align: auto;
     text-decoration: none;
 }
+
+
+// Page SLI
+
+.entreprise {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Description Description Description Description"
+      "Photo Photo Photo Photo";
+  }
+  
+  .Description { grid-area: Description;}
+  
+  .PhotodeGroupe { grid-area: Photo; 
+
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-2xbj{border-color:inherit;font-size:18px;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-sysp{color:#3166ff;text-align:center;vertical-align:top}

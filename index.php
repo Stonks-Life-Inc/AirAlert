@@ -79,7 +79,7 @@
     }
     else {
         $escargot = "res/media/img/Escargot_lezgongue.png";
-        $message = "C'est okey mon reuf, va t'éclater dans la cambrousse ! Je sais pas moi, saute dans un tas de feuilles mortes, fais du frisbee avec des amis. Trouve de bonnes activités !";
+        $message = "C'est okay mon reuf, va t'éclater dans la cambrousse ! Je sais pas moi, saute dans un tas de feuilles mortes, fais du frisbee avec des amis. Trouve de bonnes activités !";
     }
     
     ?>
