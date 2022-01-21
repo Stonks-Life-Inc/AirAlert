@@ -164,6 +164,21 @@
     </section>
 
     <script src="" async defer></script>
+
+    <div class="photos">
+        <div class="Arthur">
+            <img src="res/media/img/Arthur.jpg" alt="Arthur" width=200px>
+        </div>
+        <div class="Baba">
+            <img src="res/media/img/Baba.jpg" alt="Baba" width=200px>
+        </div>
+        <div class="Clement">
+            <img src="res/media/img/Clement.jpg" alt="Clement" width=200px>
+        </div>
+        <div class="Sami">
+            <img src="res/media/img/Sami.jpg" alt="Sami" width=200px>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -111,6 +111,25 @@ article {
     grid-area: video;
 }
 
+.photos {  display: grid;
+    padding-left: 8%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Arthur Baba Clement Sami";
+  }
+  
+  .Arthur { grid-area: Arthur; }
+  
+  .Baba { grid-area: Baba; }
+  
+  .Clement { grid-area: Clement; }
+  
+  .Sami { grid-area: Sami; }
+  
+  
 
 /* Page Accueil */
 
