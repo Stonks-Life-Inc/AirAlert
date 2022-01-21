@@ -25,7 +25,7 @@ public class AirDataResource {
 		//Nouveau relevé test
 		AirData ad = new AirData();
 		ad.setId(0);
-		ad.setDateMesure("20/01/2022");
+		ad.setDateMesure("2022-01-20");
 		ad.setNo2(10);
 		ad.setO3(50);
 		ad.setPm10(1000);
@@ -34,7 +34,7 @@ public class AirDataResource {
 		airData.add(ad);
 		
 		ad.setId(1);
-		ad.setDateMesure("21/01/2022");
+		ad.setDateMesure("2022-01-21");
 		ad.setNo2(50);
 		ad.setO3(14);
 		ad.setPm10(32);
@@ -46,7 +46,7 @@ public class AirDataResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllAirData() {
-		return Response.ok(airData).build();
+		return Response.ok(Consumer.airDataConsumer).build();
 	}
 	
 	//On cherche un relevé de l'état de l'air grâce à l'ID du relevé
