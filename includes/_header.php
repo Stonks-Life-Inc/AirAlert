@@ -1,7 +1,7 @@
 <header>
     <nav id="header-nav">
         <div id="nav-home-logo" class="nav-div">
-            <a href="index.html" title="Accueil" id="sli-logo-div"><img src="res/media/img/logo/logo_sli.png" alt="Stonks Life Inc. logo" width="35%" /></a>
+            <a href="index.php" title="Accueil" id="sli-logo-div"><img src="res/media/img/logo/logo_sli.png" alt="Stonks Life Inc. logo" width="35%" /></a>
             <!-- <a href="index.html" title="Accueil" class="nav-btn">Accueil</a> -->
         </div>
         <div id="Logo_AirAlert" class="nav-div">
