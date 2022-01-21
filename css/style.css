@@ -128,6 +128,11 @@ article {
   word-break: normal;
 }
 
+#videoYT {
+  position: relative;
+  top: 17%;
+}
+
 .tg .tg-ugpb {
   font-size: large;
   font-weight: bold;
@@ -159,12 +164,51 @@ article {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: text;
+  padding: 10px;
 }
 
 .video {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: video;
+}
+
+.photos {
+  display: -ms-grid;
+  display: grid;
+  background-color: #b62535;
+  padding-left: 9%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: "Arthur Baba Clement Sami";
+}
+
+.Arthur {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: Arthur;
+}
+
+.Baba {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: Baba;
+}
+
+.Clement {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: Clement;
+}
+
+.Sami {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: Sami;
 }
 
 /* Page Accueil */
@@ -225,5 +269,77 @@ input[type=integer] {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   vertical-align: auto;
   text-decoration: none;
+}
+
+.entreprise {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: "Description Description Description Description" "Photo Photo Photo Photo";
+}
+
+.Description {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: Description;
+}
+
+.PhotodeGroupe {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: Photo;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px auto;
+}
+
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg .tg-2xbj {
+  border-color: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+}
+
+.tg .tg-sysp {
+  color: #3166ff;
+  text-align: center;
+  vertical-align: top;
 }
 /*# sourceMappingURL=style.css.map */
