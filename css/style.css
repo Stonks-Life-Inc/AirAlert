@@ -126,6 +126,11 @@ article {
   word-break: normal;
 }
 
+#videoYT {
+  position: relative;
+  top: 17%;
+}
+
 .tg .tg-ugpb {
   font-size: large;
   font-weight: bold;
@@ -157,6 +162,7 @@ article {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: text;
+  padding: 10px;
 }
 
 .video {
